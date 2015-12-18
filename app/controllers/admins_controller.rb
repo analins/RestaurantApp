@@ -1,28 +1,15 @@
 class AdminsController < ApplicationController
 
-  def new
-    @admin = Admin.new
+  def index
   end
 
-  def create
-    Admin.create(admin_params)
-    redirect_to root_path
-  end
+  # def create
+  #   Admin.create(admin_params)
+  #   redirect_to root_path
+  # end
 
   def login
   end
-
-  def menu
-    authenticate!
-    @food = Food.new()
-  end
-
-  def users
-    authenticate!
-    @user = User.new()
-  end
-
-
 
   private
 

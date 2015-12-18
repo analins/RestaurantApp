@@ -1,0 +1,22 @@
+<h2>Menu</h2>
+<%= button_to "Log Out", sessions_path, method: :delete %>
+
+<ul>
+  <% @food_items.each do |food_item| %>
+    <li>
+      <%= food_item.name %> <%= button_to "x", food_item_path(food_item), method: :delete%> <br>
+      <%= food_item.description %> <%= food_item.price %>
+    </li>
+  <% end %>
+</ul>
+
+<h4>Add New Dish</h4>
+<%= form_for @food_item do |f| %>
+  <%= f.label 'Dish Name' %>
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  <%= f.submit %>
+<% end %>

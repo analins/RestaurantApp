@@ -1,0 +1,16 @@
+<h2>Orders</h2>
+
+<%= form_for @order do |f| %>
+  <%= f.collection_select(:food_item_id, FoodItem.all, :id, :name) %>
+  <%= f.collection_select(:party_id, Party.all, :id, :name) %>
+  <%= f.submit %>
+<% end %>
+
+<ul>
+  <% @orders.each do |order| %>
+    <li>
+      Table: <%= order.party.name %> <br>
+      Order: <%= order.food_item.name %>
+    </li>
+  <% end %>
+</ul>

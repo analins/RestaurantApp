@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
 
   root 'welcome#index'
-
-  resources :admins do
-    resources :staff
-    resources :food
-  end
   get '/adminslogin' => 'admins#adminslogin'
-  get '/users/login' => 'users#login'
+  get '/login' => 'users#login'
+  resources :admins
+
+
+  resources :users
+
+
+  resources :orders
+  resources :food_items
+  resources :parties
+
   post '/sessions' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy'
 
