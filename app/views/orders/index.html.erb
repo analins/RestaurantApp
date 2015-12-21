@@ -1,16 +1,12 @@
+<li><%= link_to "Home", root_path%></li>
 <h2>Orders</h2>
-
-<%= form_for @order do |f| %>
-  <%= f.collection_select(:food_item_id, FoodItem.all, :id, :name) %>
-  <%= f.collection_select(:party_id, Party.all, :id, :name) %>
-  <%= f.submit %>
-<% end %>
 
 <ul>
   <% @orders.each do |order| %>
     <li>
-      Table: <%= order.party.name %> <br>
-      Order: <%= order.food_item.name %>
+      <%= link_to "Table:", order_path(order) %>" <%= order.party.name %> <br>
+      Order: <%= order.food_item.name %> <br>
+      <%= button_to "x", order_path(order), method: :delete%>
     </li>
   <% end %>
 </ul>

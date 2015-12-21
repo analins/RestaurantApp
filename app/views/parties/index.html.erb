@@ -1,2 +1,10 @@
 create/add party here
 re direct to orders...create order for party.
+<h4>Add New Party</h4>
+<%= form_for @party do |f| %>
+  <%= f.label 'Last Name' %>
+  <%= f.text_field :name %>
+  <%= f.label 'Number of Guests' %>
+  <%= f.number_field :count %>
+  <%= f.submit %>
+<% end %>

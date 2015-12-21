@@ -8,7 +8,7 @@ class AdminsController < ApplicationController
   #   redirect_to root_path
   # end
 
-  def login
+  def adminslogin
   end
 
   private

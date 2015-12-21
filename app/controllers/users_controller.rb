@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
 
   def index
-    
+    @users = User.all
+  end
+
+  def login
   end
 
   def new
@@ -11,9 +14,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    authenticate!
+    # authenticate!
     User.create(user_params)
-    redirect_to new_user_path
+    redirect_to users_path
   end
 
   def destroy

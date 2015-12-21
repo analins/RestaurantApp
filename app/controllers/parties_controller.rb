@@ -6,7 +6,12 @@ class PartiesController < ApplicationController
   end
 
   def create
-    Party.create(parties_params)
+    Party.create(party_params)
+    redirect_to users_path
+  end
+
+  def destroy
+    Party.delete(params[:id])
     redirect_to parties_path
   end
 
