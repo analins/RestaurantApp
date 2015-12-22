@@ -14,8 +14,7 @@
  *= require materialize
  */
  body {
-   background-image: image-url("backgroundd.jpg");
-   background-size: ;
+   background-image: image-url('backgroundd.jpg');
    background-repeat: repeat;
    background-position: relative;
    font-family: 'Poiret One', sans-serif;
