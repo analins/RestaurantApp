@@ -14,7 +14,7 @@
  *= require materialize
  */
  body {
-   background-image: url('backgroundd.jpg');
+   background-image: image-url("backgroundd.jpg");
    background-size: ;
    background-repeat: repeat;
    background-position: relative;
