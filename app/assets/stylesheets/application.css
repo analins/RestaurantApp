@@ -11,24 +11,7 @@
  * file per style scope.
  *
  *= require_self
+ *= require admins
  *= require materialize
- */
- body {
-   background-image: image-url('backgroundd.jpg');
-   background-repeat: repeat;
-   background-position: relative;
-   font-family: 'Poiret One', sans-serif;
-   font-size: 1.5em;
- }
 
- .container {
-   margin-top: 15%;
-   font-family: 'Poiret One', sans-serif;
-   text-align: center;
-   color: white;
-   text-shadow:1px 1px 1px grey;
-   background-color: rgba(50,205,50,0.75);
-   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-   padding: .5em;
-   border-radius: 5px;
- }
+ */
