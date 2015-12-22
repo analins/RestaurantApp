@@ -7,7 +7,12 @@ class PartiesController < ApplicationController
 
   def create
     Party.create(party_params)
-    redirect_to users_path
+    redirect_to parties_path(party)
+  end
+
+  def show
+    @party = Party.find(params[:id])
+    @order = @party.orders.new
   end
 
   def destroy

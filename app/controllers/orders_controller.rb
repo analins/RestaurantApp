@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
 
   def index
-    @orders = Order.all
+    @orders = Order.where({is_complete: false})
   end
 
   def new
@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
 
   def create
     Order.create(order_params)
-    redirect_to users_path
+    redirect_to :back
   end
 
   def show
@@ -24,14 +24,14 @@ class OrdersController < ApplicationController
   def update
     order = Order.find(params[:id])
     order.update(order_params)
-    redirect_to orders_path
+    redirect_to
   end
 
 
 
   def destroy
     Order.delete(params[:id])
-    redirect_to users_path
+    redirect_to :back
   end
 
   private

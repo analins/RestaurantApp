@@ -1,3 +1,18 @@
+<h4>Current Parties</h4>
+<ul>
+  <% @parties.each do |party| %>
+    <li>
+    Table: <%= party.table %> <br>
+      Name: <%= party.name %>
+      <a href="/parties/<%= party.id%>"><%= party.name %></a>
+
+
+      <%= button_to "x", party_path(party), method: :delete%>
+
+    </li>
+  <% end %>
+</ul>
+
 
 <h4>Add New Party</h4>
 <%= form_for @party do |f| %>

@@ -1,0 +1,22 @@
+<h4>Order for Table <%= @party.table %> </h4>
+<h4>Last Name: <%= @party.name %> </h4>
+
+
+<ul>
+  <% @party.orders.each do |order| %>
+  <li>
+    <% if order.food_item %>
+    <%= order.food_item.name %>.... $<%= '%.2f' % order.food_item.price %> <%= link_to 'order', order_path(order) %>
+    <% end %>
+  </li>
+
+  <% end %>
+
+
+</ul>
+<%= form_for @order do |f| %>
+  <%= f.collection_select(:food_item_id, FoodItem.all, :id, :name, class: 'browser-default') %>
+  <%= f.hidden_field :party_id, :value => @party.id%>
+  <%= f.submit %>
+<% end %>
+<%= @party.balance() %>
