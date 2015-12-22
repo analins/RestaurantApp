@@ -1,8 +1,8 @@
-<h2>Staff</h2>
-<div class="container">
+<%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track' => true %>
+<h2>Staff Login</h2>
+
   <%= form_tag users_path do %>
     <%= label_tag(:user) %>
     <%= collection_select(:user, :user_id, User.all, :id, :username, class: 'browser-default')%> <br>
-    <%=submit_tag 'Login' %>
+    <%=submit_tag 'Login', class: 'waves-effect waves-light red lighten-1 btn' %>
     <% end %>
-</div>

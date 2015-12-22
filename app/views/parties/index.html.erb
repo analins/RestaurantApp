@@ -1,13 +1,13 @@
+<%= stylesheet_link_tag    'parties', media: 'all', 'data-turbolinks-track' => true %>
 <h4>Current Parties</h4>
 <ul>
   <% @parties.each do |party| %>
     <li>
-    Table: <%= party.table %> <br>
-      Name: <%= party.name %>
+    Table: <%= party.table %>
       <a href="/parties/<%= party.id%>"><%= party.name %></a>
 
+    <%= link_to "x", party_path(party), class: 'btn-floating btn-large waves-effect waves-light red lighten-1', id: 'button', method: :delete %>
 
-      <%= button_to "x", party_path(party), method: :delete%>
 
     </li>
   <% end %>
@@ -15,12 +15,12 @@
 
 
 <h4>Add New Party</h4>
-<%= form_for @party do |f| %>
+<%= form_for @party, html: {class: "add"} do |f| %>
   <%= f.label 'Last Name' %>
   <%= f.text_field :name %>
   <%= f.label 'Number of Guests' %>
   <%= f.number_field :count %>
   <%= f.label 'Table' %>
   <%= f.number_field :table %>
-  <%= f.submit %>
+  <%= f.submit 'Add', class: 'waves-effect waves-light red lighten-1 btn'%>
 <% end %>

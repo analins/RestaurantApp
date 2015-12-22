@@ -1,7 +1,7 @@
-<li><%= link_to "Home", root_path%></li>
+<%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track' => true %>
 <h2>Welcome</h2>
 <ul>
-  <li><a href="/parties">Current Parties</a></li>
-  <li><a href="/orders/new">New Order</a></li>
-  <li><a href="/orders">All Orders</a></li>
+  <li><a href="/parties" class='waves-effect waves-light red lighten-1 btn-large'>Parties</a></li>
+  <li><a href="/food_items" class='waves-effect waves-light red lighten-1 btn-large'>Menu</a></li>
+  <li><a href="/orders" class='waves-effect waves-light red lighten-1 btn-large'>Orders</a></li>
 </ul>
