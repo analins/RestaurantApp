@@ -9,9 +9,6 @@
     Last Name: <%= order.party.name %> <br>
     <% end %>
       Order: <%= order.food_item.name %> <br>
-
-      <%= button_to "x", order_path(order), method: :delete%>
-
     </li>
   <% end %>
 </ul>

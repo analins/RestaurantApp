@@ -2,13 +2,30 @@
 <html>
 <head>
   <title>RestaurantPOSApp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Federo' rel='stylesheet' type='text/css'>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+  <nav>
+    RestaurantApp
+  <ul class="right hide-on-med-and-down">
+    <li><a href="/users">Home</a></li>
+    <li><a href="/parties">Parties</a></li>
+    <li><a href="/orders">Orders</a></li>
+  </ul>
+  <ul id="slide-out" class="side-nav">
+    <li><a href="/users">Home</a></li>
+    <li><a href="/parties">Parties</a></li>
+    <li><a href="/orders">Orders</a></li>
+  </ul>
+  <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">more_vert</i></a>
+</nav>
+
   <div class="container">
     <%= yield %>
   </div>
