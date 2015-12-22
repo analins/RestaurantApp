@@ -1,5 +1,5 @@
 body {
-  background-image: url(image-path('backgroundd.jpg'));
+  background-image: url('backgroundd.jpg');
   background-repeat: repeat;
   background-position: relative;
   font-family: 'Poiret One', sans-serif;
