@@ -7,7 +7,7 @@ class PartiesController < ApplicationController
 
   def create
     Party.create(party_params)
-    redirect_to parties_path(party)
+    redirect_to :back
   end
 
   def show
