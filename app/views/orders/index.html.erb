@@ -1,14 +1,20 @@
 
 <h2>Orders</h2>
 
-<ul>
+<ul  class="color-status">
 
   <% @orders.each do |order| %>
-    <li>
+    <% if (order.is_complete == false) %>
+    <li data-status="<%= order.order_status %>">
       <% if order.party %>
     Last Name: <%= order.party.name %> <br>
     <% end %>
       Order: <%= order.food_item.name %> <br>
+    <%= form_for order do |f| %>
+    <%= f.hidden_field :is_complete, :value => true %>
+    <%= f.submit "Done"%>
+    <% end %>
     </li>
+  <% end %>
   <% end %>
 </ul>
