@@ -27,8 +27,6 @@ class OrdersController < ApplicationController
     redirect_to orders_path
   end
 
-
-
   def destroy
     Order.delete(params[:id])
     redirect_to :back
