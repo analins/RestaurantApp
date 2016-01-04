@@ -20,7 +20,7 @@ https://glacial-meadow-6114.herokuapp.com/
 *Orders are also timed, so as time has elapsed the orders display change colors so that kitchen staff members can keep track of how fast/what orders are up the soonest.
 
 ===Screenshots
-<img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.38.42 PM.png" width="500px">
+![welcome view](wireframes/screenshots/Screen Shot 2016-01-03 at 9.38.42 PM.png)
 <img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.38.59 PM.png" width="500px">
 <img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.41.35 PM.png" width="500px">
 <img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.41.00 PM.png" width="500px">
