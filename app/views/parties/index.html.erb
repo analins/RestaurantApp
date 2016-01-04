@@ -5,7 +5,7 @@
   <% @parties.each do |party| %>
     <li class="card-panel hoverable">
       <a href="/parties/<%= party.id%>">Table <%= party.table %> <br> Name: <%= party.name %></a>
-    <%= link_to  parties_path(party), method: :delete do %>
+    <%= link_to  party_path(party), method: :delete do %>
     <i class="material-icons">not_interested</i>
     <% end %>
     </li>
