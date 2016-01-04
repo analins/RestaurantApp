@@ -3,6 +3,6 @@
 
   <%= form_tag users_path do %>
     <%= label_tag(:user) %>
-    <%= collection_select(:user, :user_id, User.all, :id, :username, class: 'browser-default')%> <br>
-    <%=submit_tag 'Login', class: 'waves-effect waves-light red lighten-1 btn' %>
+    <%= collection_select(:user, :user_id, User.all, :id, :username)%> <br>
+    <%=link_to 'Login', users_path, class: 'waves-effect waves-light deep-purple btn' %>
     <% end %>

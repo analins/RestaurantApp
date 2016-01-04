@@ -1,26 +1,34 @@
 <%= stylesheet_link_tag    'parties', media: 'all', 'data-turbolinks-track' => true %>
-<h4>Current Parties</h4>
-<ul>
+
+<h2>Current Parties</h2>
+<ul class="party-list">
   <% @parties.each do |party| %>
-    <li>
-    Table: <%= party.table %>
-      <a href="/parties/<%= party.id%>"><%= party.name %></a>
-
-    <%= link_to "x", party_path(party), class: 'btn-floating btn-large waves-effect waves-light red lighten-1', id: 'button', method: :delete %>
-
-
+    <li class="card-panel hoverable">
+      <a href="/parties/<%= party.id%>">Table <%= party.table %> <br> Name: <%= party.name %></a>
+    <%= link_to  parties_path(party), method: :delete do %>
+    <i class="material-icons">not_interested</i>
+    <% end %>
     </li>
   <% end %>
 </ul>
 
 
-<h4>Add New Party</h4>
-<%= form_for @party, html: {class: "add"} do |f| %>
-  <%= f.label 'Last Name' %>
-  <%= f.text_field :name %>
-  <%= f.label 'Number of Guests' %>
-  <%= f.number_field :count %>
-  <%= f.label 'Table' %>
-  <%= f.number_field :table %>
-  <%= f.submit 'Add', class: 'waves-effect waves-light red lighten-1 btn'%>
-<% end %>
+<a class="modal-trigger waves-effect waves-light deep-purple btn" href="#modal4">Add Party</a>
+
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <h4>Add New Party</h4>
+      <%= form_for @party, html: {class: "add"} do |f| %>
+      <%= f.label 'Last Name' %>
+      <%= f.text_field :name %>
+      <%= f.label 'Number of Guests' %>
+      <%= f.text_field :count %>
+      <%= f.label 'Table' %>
+      <%= f.text_field :table %>
+      <div class="modal-footer">
+        <%= f.submit 'Add', class: "modal-action modal-close waves-effect waves deep-purple btn-flat", id: 'submit-modal'%>
+      <% end %>
+      </div>
+  </div>
+</div>

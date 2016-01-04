@@ -1,23 +1,38 @@
-<li><%= link_to "Home", root_path%></li>
-<h2>Menu</h2>
-<%= button_to "Log Out", sessions_path, method: :delete %>
+<%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track' => true %>
 
-<ul>
+<h2>Menu</h2>
+
+<ul class="list">
   <% @food_items.each do |food_item| %>
-    <li>
-      <%= food_item.name %> <%= button_to "x", food_item_path(food_item), method: :delete%> <br>
-      <%= food_item.description %> <%= food_item.price %>
+    <li class="card-panel hoverable">
+      <%= link_to food_item_path(food_item), method: :delete do %>
+      <i class="material-icons">not_interested</i>
+      <% end %>
+      <%= food_item.name %> <br>
+       <span class="price">$<%='%.2f' %  food_item.price %></span> <br>
+      <span class="desc"><%= food_item.description %></span>
     </li>
   <% end %>
 </ul>
 
-<h4>Add New Dish</h4>
-<%= form_for @food_item do |f| %>
-  <%= f.label 'Dish Name' %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
-  <%= f.submit %>
-<% end %>
+<ul class="food-index">
+  <li><a class="modal-trigger waves-effect waves-light deep-purple btn" href="#modal3">Add Dish</a></li>
+  <li><%= link_to "Log Out ", sessions_path, method: :delete, class: 'waves-effect waves-light deep-purple btn' %></li>
+</ul>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <h4>Add New Dish</h4>
+    <%= form_for @food_item do |f| %>
+      <%= f.label 'Dish Name' %>
+      <%= f.text_field :name %>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+      <div class="modal-footer">
+      <%= f.submit 'Done', class: "modal-action modal-close waves-effect waves deep-purple btn-flat", id: 'submit-modal'%>
+    <% end %>
+  </div>
+  </div>
+  </div>

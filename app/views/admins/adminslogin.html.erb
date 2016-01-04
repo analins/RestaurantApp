@@ -1,9 +1,9 @@
 <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track' => true %>
-<h2>ADMIN LOGIN</h2>
+<h2>Admin Login</h2>
 <%= form_tag sessions_path do %>
   <%= label_tag :username %>
   <%= text_field_tag :username %>
   <%= label_tag :password %>
   <%= password_field_tag :password %>
-  <%= submit_tag "Log In", class: 'waves-effect waves-light red lighten-1 btn'%>
+  <%= submit_tag "Log In", class: 'waves-effect waves-light deep-purple btn'%>
 <% end %>

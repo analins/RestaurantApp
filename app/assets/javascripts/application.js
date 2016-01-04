@@ -18,6 +18,14 @@
 $(document).ready(function() {
     $(".button-collapse").sideNav();
     $('select').material_select();
+    $('.modal-trigger').leanModal();
+
+    //$('.new-order-btn').on('click', function(){
+    //  $('#new-order-modal').leanModal();
+  //  })
+    //$('#close-order-modal').on('click', function(){
+    //  $('#new-order-modal').closeModal();
+    //})
     ColorChange();
     Refresh();
 
@@ -32,13 +40,13 @@ function ColorChange(){
     console.log(waitTime);
 
     if (waitTime >= 3){
-      $order.css({'background-color': 'red',  'color': 'gray'}).fadeIn(100).fadeOut(100).fadeIn(100);
+      $order.css({'color': 'red'}).fadeIn(100).fadeOut(100).fadeIn(100);
     } else if (waitTime >= 2){
-      $order.css({'background-color': 'orange',  'color': 'gray'});
+      $order.css({'color': 'orange'});
     } else if (waitTime >= 1){
-      $order.css({'background-color': 'yellow',  'color': 'gray'});
+      $order.css({'color': 'yellow'});
     } else if (waitTime < 1){
-      $order.css({'background-color': 'green',  'color': 'gray'});
+      $order.css({'color': 'green'});
     }
 
   });

@@ -1,17 +1,25 @@
-<%= button_to "Log Out", sessions_path, method: :delete %>
-<h1>Staff</h1>
+<%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track' => true %>
 
-<ul>
+<h2>Staff</h2>
+
+<ul class="list">
   <% @users.each do |user| %>
-    <li>
-      <%= user.name %> <%= button_to "x", user_path(user), method: :delete%>
+    <li class="card-panel hoverable">
+      <%= user.username %> <%= link_to user_path(user), method: :delete do %>
+      <i class="material-icons">not_interested</i>
+      <% end %>
     </li>
   <% end %>
 </ul>
+<div class="card-panel hoverable" id="form-id">
+  <%= form_for @user do |f| %>
+    <%= f.label 'NEW USER' %>
+    <%= f.text_field :username %>
 
-<%= form_for @user do |f| %>
-  <%= f.label 'Name' %>
-  <%= f.text_field :name %>
+    <%= f.submit class: 'waves-effect waves-light deep-purple btn' %>
+  <% end %>
+</div>
 
-  <%= f.submit %>
-<% end %>
+<ul>
+  <li><%= link_to "Log Out", sessions_path, method: :delete, class: 'waves-effect waves-light deep-purple btn' %></li>
+</ul>

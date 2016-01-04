@@ -15,3 +15,30 @@
  *= require materialize
 
  */
+
+
+ body {
+   font-family: 'Poiret One', sans-serif;
+   font-size: 1.5em;
+ }
+
+ .container {
+   margin-top: 20%;
+   text-align: center;
+   color: white;
+
+   background-color: #9575cd;
+   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+   padding: .5em;
+   border-radius: 5px;
+ }
+ 
+.modal-content {
+  color: #5e35b1;
+}
+
+
+.modal-footer {
+  text-align: center;
+  margin: 0 auto;
+}

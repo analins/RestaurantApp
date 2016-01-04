@@ -1,20 +1,31 @@
+<%= stylesheet_link_tag    'orders', media: 'all', 'data-turbolinks-track' => true %>
 
 <h2>Orders</h2>
+
+<div class="row">
+
 
 <ul  class="color-status">
 
   <% @orders.each do |order| %>
     <% if (order.is_complete == false) %>
-    <li data-status="<%= order.order_status %>">
+    <li data-status="<%= order.order_status %>" class="card-panel hoverable">
       <% if order.party %>
     Last Name: <%= order.party.name %> <br>
     <% end %>
       Order: <%= order.food_item.name %> <br>
+      <% if (order.notes == true) %>
+      Notes: <%= order.notes %>
+      <% end %>
+
     <%= form_for order do |f| %>
     <%= f.hidden_field :is_complete, :value => true %>
-    <%= f.submit "Done"%>
+    <span class="flow-text"><%= f.submit "✔", class: "btn-floating waves-effect waves-light deep-purple"%></span>
+
     <% end %>
     </li>
   <% end %>
   <% end %>
 </ul>
+
+</div>

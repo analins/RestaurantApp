@@ -1,45 +1,52 @@
 .container {
-  margin-top: 10%;
-  font-size: 1em;
+  margin-top: 15%;
 }
-
-.container a {
-  color: white;
-}
-
-
-
 .container li {
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: .5em;
+  font-weight: 300;
   display: inline-block;
-  margin: .5em;
+  width: 10em;
+  color: #673ab7;
   text-align: left;
-
 }
 
-.add {
-  margin: auto;
-  background: white;
-  padding: 1em;
-  font-size: 1em;
-  border-radius: 5px;
-  color: rgb(241, 103, 112);
+.party-order li{
+  font-size: .75em;
   width: 80%;
-  margin-bottom: 1em;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-}
-
-#button {
-  font-size: .7em;
-  display: inline;
-  padding: .2em;
-
-
-
 
 }
 
-h4 {
-  font-family: 'Federo', sans-serif;
+.party-list a{
+  color: #673ab7;
+}
+
+.price {
+  float: right;
+}
+
+.buttons li{
+  width: 8em;
+  text-align: center;
+  margin-bottom: .5em;
+
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+.receipt li{
+  font-size: .75em;
+  display: block;
+  width: 80%;
+  margin: 1em;
+}
+i {
+float: right;
+}
+
+#submit-modal {
   color: white;
-  text-shadow:1px 1px 1px grey;
+    font-family: 'Nunito', sans-serif;
 }

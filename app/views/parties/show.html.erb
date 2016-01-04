@@ -1,25 +1,62 @@
 <%= stylesheet_link_tag    'parties', media: 'all', 'data-turbolinks-track' => true %>
 
-<h5>Order for Table <%= @party.table %> </h5>
+<h3>Order for Table <%= @party.table %></h3>
 <h5>Last Name: <%= @party.name %> </h5>
 
 
-<ul>
+<ul class="party-order">
   <% @party.orders.each do |order| %>
-  <li>
+  <li class="card-panel hoverable">
     <% if order.food_item %>
-    <%= order.food_item.name %>.... <span>$<%= '%.2f' % order.food_item.price %></span> <%= button_to "x", order_path(order), class: 'waves-effect waves-light red lighten-1 btn', method: :delete%>
+    <%= order.food_item.name %>
+    <%= link_to order_path(order), method: :delete do %>
+    <i class="material-icons">not_interested</i>
+    <% end %>
     <% end %>
   </li>
 
   <% end %>
-
-
 </ul>
-<%= form_for @order do |f| %>
-  <%= f.collection_select(:food_item_id, FoodItem.all, :id, :name, class: 'browser-default') %>
-  <%= f.hidden_field :party_id, :value => @party.id%>
-  <%= f.submit 'Add Item', class: 'waves-effect waves-light red lighten-1 btn'%>
-<% end %>
 
-<h6>Order Total: $<%= '%.2f' % @party.balance() %></h6>
+
+<ul class="buttons">
+  <li><a class="modal-trigger waves-effect waves-light deep-purple btn" href="#modal1">Add New</a></li>
+  <li><a class="modal-trigger waves-effect waves-light deep-purple btn" href="#modal2">Receipt </a></li>
+</ul>
+
+
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h3>Add New Item</h3>
+    <%= form_for @order do |f| %>
+      <%= f.collection_select(:food_item_id, FoodItem.all, :id, :name, class: 'browser-default') %>
+      <%= f.label 'Notes' %>
+      <%= f.text_field :notes %>
+      <%= f.hidden_field :party_id, :value => @party.id%>
+
+      <div class="modal-footer">
+      <%= f.submit 'Add Item', class: "modal-action modal-close waves-effect waves deep-purple btn-flat", id: 'submit-modal'%>
+    <% end %>
+  </div>
+  </div>
+  </div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <h3>Receipt</h3>
+    <ul class="receipt">
+      <% @party.orders.each do |order| %>
+      <li>
+        <% if order.food_item %>
+        <%= order.food_item.name %>.... <span class="price">$<%= '%.2f' % order.food_item.price %></span>
+        <% end %>
+      </li>
+      <% end %>
+      <li class="total"><h5>Order Total: $<%= '%.2f' % @party.balance() %></h5></li>
+    </ul>
+    <div class="modal-footer">
+     <a href="#!" class="modal-action modal-close waves-effect waves deep-purple btn-flat" id='submit-modal'>Pay</a>
+   </div>
+  </div>
+  </div>

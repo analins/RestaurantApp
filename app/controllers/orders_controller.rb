@@ -37,7 +37,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:food_item_id, :party_id, :is_complete)
+    params.require(:order).permit(:food_item_id, :party_id, :is_complete, :notes)
   end
 
 end

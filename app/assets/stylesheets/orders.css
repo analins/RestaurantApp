@@ -1,0 +1,31 @@
+.container {
+  margin-top: 15%;
+}
+.container li {
+  font-family: 'Nunito', sans-serif;
+  margin: auto;
+  margin-bottom: .5em;
+  font-weight: 300;
+  font-size: .75em;
+  text-align: left;
+  width: 85%;
+}
+
+.container li:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.flow-text {
+  text-align: center;
+  font-size: .75em;
+}
+
+form {
+  background: none;
+  box-shadow: none;
+  width: .75em;
+  float: right;
+  vertical-align: text-top;
+  margin-top: -4em;
+  margin-right: 1em;
+}

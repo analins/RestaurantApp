@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def create
     # authenticate!
     User.create(user_params)
-    redirect_to users_path
+    redirect_to new_user_path
   end
 
   def destroy
