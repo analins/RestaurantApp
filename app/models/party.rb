@@ -1,5 +1,5 @@
 class Party < ActiveRecord::Base
-  has_many :orders
+  has_many :orders, dependent: :destroy
   has_many :food_items, through: :orders
 
 def balance

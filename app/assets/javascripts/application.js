@@ -20,12 +20,6 @@ $(document).ready(function() {
     $('select').material_select();
     $('.modal-trigger').leanModal();
 
-    //$('.new-order-btn').on('click', function(){
-    //  $('#new-order-modal').leanModal();
-  //  })
-    //$('#close-order-modal').on('click', function(){
-    //  $('#new-order-modal').closeModal();
-    //})
     ColorChange();
     Refresh();
 
@@ -37,7 +31,6 @@ function ColorChange(){
   $allOrders.children('li').each(function(){
     var $order = $(this);
     var waitTime = $order.data('status');
-    console.log(waitTime);
 
     if (waitTime >= 3){
       $order.css({'color': 'red'}).fadeIn(100).fadeOut(100).fadeIn(100);
