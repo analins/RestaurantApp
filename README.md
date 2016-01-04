@@ -21,7 +21,7 @@ https://glacial-meadow-6114.herokuapp.com/
 
 ===Screenshots
 ![welcome view] (/wireframes/screenshots/Screen Shot 2016-01-03 at 9.38.42 PM.png)
-<img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.38.59 PM.png" width="500px">
-<img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.41.35 PM.png" width="500px">
-<img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.41.00 PM.png" width="500px">
-<img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.42.35 PM.png" width="500px">
+<img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.38.59 PM.png">
+<img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.41.35 PM.png">
+<img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.41.00 PM.png">
+<img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.42.35 PM.png">
