@@ -1,0 +1,52 @@
+.container {
+  margin-top: 15%;
+}
+.container li {
+  font-family: 'Nunito', sans-serif;
+  margin-bottom: .5em;
+  font-weight: 300;
+  display: inline-block;
+  width: 10em;
+  color: #673ab7;
+  text-align: left;
+}
+
+.party-order li{
+  font-size: .75em;
+  width: 80%;
+
+}
+
+.party-list a{
+  color: #673ab7;
+}
+
+.price {
+  float: right;
+}
+
+.buttons li{
+  width: 8em;
+  text-align: center;
+  margin-bottom: .5em;
+
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+.receipt li{
+  font-size: .75em;
+  display: block;
+  width: 80%;
+  margin: 1em;
+}
+i {
+float: right;
+}
+
+#submit-modal {
+  color: white;
+    font-family: 'Nunito', sans-serif;
+}

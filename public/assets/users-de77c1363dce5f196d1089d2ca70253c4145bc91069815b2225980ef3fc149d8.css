@@ -1,0 +1,62 @@
+.container {
+  margin-top: 15%;
+}
+.container li {
+  font-family: 'Nunito', sans-serif;
+  margin: 2em;
+  font-weight: 300;
+}
+
+.list li{
+  font-size: .8em;
+  text-align: left;
+  color: #5e35b1;
+  margin: .5em auto;
+  width: 80%;
+}
+
+.desc {
+  text-align: left;
+  font-size: .6em;
+  color: #9575cd;
+}
+
+.price {
+  font-size: .7em;
+  color: #7e57c2;
+}
+
+i {
+float: right;
+}
+
+form {
+  overflow: auto;
+  font-family: 'Nunito', sans-serif;
+  margin: 0 auto;
+  background: white;
+  font-size: .8em;
+  font-weight: 300;
+  color: #5e35b1;
+  width: 100%;
+}
+#form-id {
+  width: 80%;
+  margin: auto;
+  margin-top: -.5em;
+  margin-bottom: -.5em;
+}
+#menu-a, #logout-a {
+  padding: 0 1.8em;
+}
+
+.food-index li {
+font-size: .75em;
+margin: .75em;
+}
+
+#submit-modal {
+  color: white;
+  font-family: 'Nunito', sans-serif;
+
+}
