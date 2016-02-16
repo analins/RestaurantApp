@@ -1,7 +1,7 @@
 # RestaurantApp
-RestaurantApp is a restaurant Point of Service app, designed for streamlined management for wait and kitchen staff.
-This app is optimized for desktop and mobile.
 #### Description
+* RestaurantApp is a restaurant Point of Service app, designed for streamlined management for wait and kitchen staff.
+This app is optimized for desktop and mobile.
 * This app features admin functions, which allow the user to add, edit remove items from a menu, and it also allows the admin to add/remove staff members.
 * As a staff member, the user can create/add parties...add/edit/remove orders for that given party...and have access to the party receipt.
 *Orders are also timed, so as time has elapsed the orders display change colors so that kitchen staff members can keep track of how fast/what orders are up the soonest.
