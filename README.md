@@ -1,4 +1,4 @@
-# RestaurantApp
+## RestaurantApp
 #### Description
 * RestaurantApp is a restaurant Point of Service app, designed for streamlined management for wait and kitchen staff.
 This app is optimized for desktop and mobile.
