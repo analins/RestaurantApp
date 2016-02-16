@@ -1,10 +1,6 @@
-# README
-## RestaurantApp
+# RestaurantApp
 RestaurantApp is a restaurant Point of Service app, designed for streamlined management for wait and kitchen staff.
 This app is optimized for desktop and mobile.
-
-https://restauranteurapp.herokuapp.com/
-
 
 ### Languages & Frameworks
 * Ruby version 2.2.3, Rails 4.2.5, PostgreSQL, Javascript, JQuery, Materialize, Testing: RSpec
