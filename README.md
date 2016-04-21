@@ -15,8 +15,8 @@ This app is optimized for desktop and mobile, and it was deployed on heroku: htt
 
 ####Instructions
 To login to RestaurantApp, please use the following credentials:
-  username: admin
-  password: admin
+**username: admin
+**password: admin
 
 ####Languages & Frameworks
 * Ruby version 2.2.3, Rails 4.2.5, PostgreSQL, Javascript, JQuery, Materialize, Testing: RSpec
