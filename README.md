@@ -14,7 +14,7 @@ This app is optimized for desktop and mobile, and it was deployed on heroku: htt
 <img src="wireframes/screenshots/Screen Shot 2016-01-03 at 9.42.35 PM.png" height="500px">
 
 ####Instructions
-To login to RestaurantApp, please use the following credentials:
+* To login to RestaurantApp, please use the following credentials:
 * username: admin
 * password: admin
 
